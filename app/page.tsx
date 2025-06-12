@@ -91,8 +91,8 @@ export default function QuizFunil() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen min-h-[100dvh] bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 flex items-center justify-center p-4 safe-area-inset">
-        <div className="text-center w-full max-w-sm mx-auto">
+      <div className="min-h-screen min-h-[100dvh] bg-kitchen flex items-center justify-center p-4 safe-area-inset">
+        <div className="glass text-center w-full max-w-sm mx-auto p-6">
           <div className="cooking-pot mb-6 sm:mb-8">
             <div className="pot-container">
               <div className="pot"></div>

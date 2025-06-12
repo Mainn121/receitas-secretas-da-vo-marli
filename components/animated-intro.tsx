@@ -76,7 +76,7 @@ export function AnimatedIntro({ onComplete }: AnimatedIntroProps) {
   }
 
   return (
-    <div className="min-h-screen min-h-[100dvh] bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 relative overflow-hidden safe-area-inset">
+    <div className="min-h-screen min-h-[100dvh] bg-kitchen relative overflow-hidden safe-area-inset">
       {/* Cooking Pot Animation - Responsive positioning */}
       <motion.div
         className="absolute top-[15%] sm:top-1/4 left-1/2 transform -translate-x-1/2 z-10"
@@ -135,7 +135,7 @@ export function AnimatedIntro({ onComplete }: AnimatedIntroProps) {
           </motion.h1>
 
           <motion.div
-            className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 mx-auto max-w-2xl"
+            className="glass p-4 sm:p-6 mb-6 sm:mb-8 mx-auto max-w-2xl"
             variants={itemVariants}
             whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
             transition={{ duration: 0.3 }}
@@ -150,13 +150,13 @@ export function AnimatedIntro({ onComplete }: AnimatedIntroProps) {
           </motion.div>
 
           <motion.div
-            className="bg-yellow-400/20 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 mb-6 sm:mb-8 mx-auto max-w-xl border border-yellow-300/30"
+            className="glass-warning p-3 sm:p-4 mb-6 sm:mb-8 mx-auto max-w-xl"
             variants={itemVariants}
             animate={{
               boxShadow: [
-                "0 0 0 0 rgba(255, 255, 0, 0.4)",
-                "0 0 0 10px rgba(255, 255, 0, 0)",
-                "0 0 0 0 rgba(255, 255, 0, 0)",
+                "0 8px 32px rgba(251, 191, 36, 0.2)",
+                "0 8px 32px rgba(251, 191, 36, 0.4)",
+                "0 8px 32px rgba(251, 191, 36, 0.2)",
               ],
             }}
             transition={{
@@ -174,7 +174,7 @@ export function AnimatedIntro({ onComplete }: AnimatedIntroProps) {
             <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
               <Button
                 onClick={onComplete}
-                className="w-full sm:w-auto bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black text-lg sm:text-xl lg:text-2xl px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 h-auto font-bold rounded-xl sm:rounded-2xl shadow-2xl touch-manipulation"
+                className="glass-button w-full sm:w-auto text-white text-lg sm:text-xl lg:text-2xl px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 h-auto font-bold rounded-xl sm:rounded-2xl touch-manipulation border-0"
               >
                 🔥 DESCOBRIR OS SEGREDOS 🔥
               </Button>

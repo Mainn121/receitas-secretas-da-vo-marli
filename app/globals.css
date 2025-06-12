@@ -61,6 +61,126 @@
 }
 
 @layer components {
+  /* Glassmorphism Styles */
+  .glass {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .glass-button {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+  }
+
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .glass-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .glass-success {
+    background: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.25);
+  }
+
+  .glass-warning {
+    background: rgba(251, 191, 36, 0.2);
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(251, 191, 36, 0.25);
+  }
+
+  .glass-danger {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.25);
+  }
+
+  /* Background Patterns */
+  .bg-kitchen {
+    background: url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=80")
+      no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .bg-kitchen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.6), rgba(249, 115, 22, 0.7));
+    z-index: 1;
+  }
+
+  .bg-kitchen > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .bg-success {
+    background: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=1920&q=80")
+      no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .bg-success::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.4), rgba(22, 163, 74, 0.5));
+    z-index: 1;
+  }
+
+  .bg-success > * {
+    position: relative;
+    z-index: 2;
+  }
+
   /* Responsive Cooking Pot Animation */
   .cooking-animation {
     position: relative;
